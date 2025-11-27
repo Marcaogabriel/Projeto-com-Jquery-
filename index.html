@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Configurações básicas da página -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Catálogo de Produtos — Projeto 2AV</title>
+
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- CSS responsivo -->
+    <link rel="stylesheet" href="css/responsive-mobile.css" media="(max-width: 699px)"/>
+    <link rel="stylesheet" href="css/responsive-desktop.css" media="(min-width: 700px)"/>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Cabeçalho do site -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1>Catálogo de Produtos</h1>
+
+        <!-- Botão para carregar produtos do JSON -->
+        <button id="btn-carregar" class="btn">Carregar Produtos</button>
+      </div>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main class="container">
+      <!-- Barra de filtros e busca -->
+      <section class="toolbar">
+        <input id="input-busca" type="search" placeholder="Buscar por nome" />
+
+        <select id="select-categoria">
+          <option value="todas">Todas as categorias</option>
+        </select>
+
+        <select id="select-preco">
+          <option value="todas">Todos os preços</option>
+          <option value="0-100">Até R$100</option>
+          <option value="100-500">R$100 a R$500</option>
+          <option value="500-2000">R$500 a R$2.000</option>
+          <option value="2000+">Acima de R$2.000</option>
+        </select>
+
+        <select id="select-ordenar">
+          <option value="padrao">Padrão</option>
+          <option value="nome">Nome (A-Z)</option>
+          <option value="preco-asc">Preço crescente</option>
+          <option value="preco-desc">Preço decrescente</option>
+        </select>
+
+        <button id="btn-limpar" class="btn sec">Limpar</button>
+
+        <div class="info-count"><span id="contador">0</span> produtos</div>
+      </section>
+
+      <!-- FORMULÁRIO DE CADASTRO (DESATIVADO) -->
+      <section class="actions-form">
+        <details>
+          <summary>Cadastrar novo produto (DESATIVADO)</summary>
+
+          <!--
+          ESTE FORMULÁRIO NÃO FUNCIONA
+          A FUNÇÃO DE CADASTRO FOI TODA COMENTADA NO JS
+        -->
+          <form class="form-cadastrar">
+            <input placeholder="Nome" disabled />
+            <input placeholder="Categoria" disabled />
+            <input placeholder="Preço" disabled />
+            <button type="button" class="btn sec">Cadastro desativado</button>
+          </form>
+        </details>
+      </section>
+
+      <!-- Lista de produtos -->
+      <section id="produtos-list" class="grid"></section>
+
+      <!-- Mensagem quando não houver produtos -->
+      <div id="nenhum" class="nenhum" style="display: none">
+        Nenhum produto encontrado.
+      </div>
+    </main>
+
+    <!-- MODAL DE DETALHES -->
+    <div id="modal" class="modal" aria-hidden="true">
+      <div class="modal-overlay"></div>
+
+      <div class="modal-content">
+        <button id="modal-close" class="modal-close">×</button>
+        <div id="modal-body"></div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="site-footer">Projeto 2AV — Catálogo de Produtos</footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/dados.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

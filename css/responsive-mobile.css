@@ -1,0 +1,77 @@
+/* responsive-mobile.css */
+@media (max-width: 768px) {
+
+  /* Toolbar */
+  .toolbar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  /* Filtros */
+  .filtros {
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .filtros select,
+  .filtros input,
+  .filtros button {
+    width: 100%;
+  }
+
+  /* Contador de produtos */
+  .info-count {
+    margin-left: 0;
+    text-align: left;
+    font-size: 14px;
+  }
+
+  /* Grid de cards */
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 12px;
+  }
+
+  .card img {
+    height: 180px;
+    object-fit: cover;
+  }
+
+  .card h3 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  /* Formulário de cadastro */
+  .form-cadastrar .row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-cadastrar input,
+  .form-cadastrar select,
+  .form-cadastrar textarea,
+  .form-cadastrar button {
+    width: 100%;
+  }
+
+  /* Cabeçalho */
+  .header-inner {
+    padding: 12px 10px;
+  }
+
+  .header-inner h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+}

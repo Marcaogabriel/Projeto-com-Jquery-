@@ -1,0 +1,13 @@
+/* responsive-desktop.css */
+.toolbar {
+  flex-wrap: nowrap;
+}
+.grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+.form-cadastrar .row {
+  flex-direction: row;
+}
+.header-inner {
+  padding: 18px;
+}
